@@ -15,6 +15,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.dailymeal.data.model.LoggedInUser;
+import com.example.dailymeal_Classes.AlertDialogue;
 import com.google.android.material.navigation.NavigationView;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,14 +36,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        try {
-            if (LoggedInUser.getUserId() != null)
-                ((TextView) findViewById(R.id.txt_header_name)).setText(LoggedInUser.getDisplayName());
-            else
-                ((TextView) findViewById(R.id.txt_header_name)).setText("Daily Meal");
-        } catch (Exception e) {}
-
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.bringToFront();
@@ -71,16 +64,14 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_home:
-                startActivity(new Intent(this, MainActivity.class));
+                callActivity(MainActivity.class);
                 break;
             case R.id.nav_prof:
-                startActivity(new Intent(this, LoginActivity.class));
+                callActivity(LoginActivity.class);
                 break;
             case R.id.nav_fav:
-//                startActivity(new Intent(this, LoginActivity.class));
                 break;
             case R.id.nav_plan:
-//                startActivity(new Intent(this, LoginActivity.class));
                 break;
             default:
                 break;
@@ -88,8 +79,28 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    private void callActivity(Class myClass) {
+        startActivity(new Intent(this, myClass));
+        finish();
+    }
+
     public void setItemChecked(int id) {
         navigationView.setCheckedItem(id);
     }
 
+    protected void checkHeaderTitle() {
+        try {
+            View headerView = navigationView.getHeaderView(0);
+            TextView txt = headerView.findViewById(R.id.txt_header_name);
+
+            if (LoggedInUser.getDisplayName() != null ) {
+                txt.setText(LoggedInUser.getDisplayName());
+            }
+            else {
+                txt.setText("Daily Meal");
+            }
+        } catch (Exception e) {
+            (new AlertDialogue(this)).printMsg(e);
+        }
+    }
 }

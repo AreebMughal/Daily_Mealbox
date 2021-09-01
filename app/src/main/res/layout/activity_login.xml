@@ -109,7 +109,17 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invalid Username/Password"
+            android:padding="8dp"
+            android:background="#80656765"
+            android:layout_gravity="center"
+            android:textColor="#B1B1B1"
+            android:visibility="invisible"
+            android:id="@+id/txt_alert"
+            />
         <Button
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="100dp"

@@ -1,6 +1,5 @@
 package com.example.dailymeal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -39,6 +38,7 @@ public class SignupActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         super.addContentView(R.layout.activity_signup);
         super.setItemChecked(R.id.nav_prof);
+        super.checkHeaderTitle();
 
         FirebaseApp firebaseApp = FirebaseApp.initializeApp(this);
 
@@ -75,7 +75,7 @@ public class SignupActivity extends BaseActivity {
     }
 
     public void openLogin(View view) {
-        startActivity(new Intent(this, LoginActivity.class));
+        this.finish();
     }
 
     public void Register(View view) {

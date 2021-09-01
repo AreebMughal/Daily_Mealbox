@@ -6,6 +6,7 @@
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
+    android:id="@+id/layout_nav_header"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
 
@@ -18,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="Daily Meal"
+        android:text="SOme things"
         android:id="@+id/txt_header_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
