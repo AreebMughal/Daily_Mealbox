@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg2">
@@ -10,6 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -38,7 +37,7 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center"
                 android:layout_marginEnd="5dp"
-                android:src="@drawable/user" />
+                android:src="@drawable/ic_profile" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/txt_uname"
@@ -46,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
                 android:hint="Username"
                 android:paddingStart="-10dp"
                 android:textColorHint="@color/grey"
@@ -67,42 +67,59 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txt_pass"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Password"
-            android:textColorHint="@color/grey"
-            app:boxStrokeColor="@color/white"
-            app:endIconMode="password_toggle"
-            app:errorEnabled="true"
-            app:errorIconDrawable="@drawable/ic_error"
-            app:hintTextColor="@color/white"
-            app:startIconDrawable="@drawable/pass_lock">
+            android:orientation="horizontal">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtxt_pass"
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/pass_lock" />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/txt_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/transparent"
-                android:inputType="textPassword"
-                android:maxLength="30"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="@color/white" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Password"
+                android:paddingStart="-10dp"
+                android:textColorHint="@color/grey"
+                app:boxStrokeColor="@color/white"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtxt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
 
         <Button
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:onClick="login"
+            android:layout_marginTop="10dp"
             android:text="Login"
             android:textColor="@color/grey"
-            app:strokeColor="@color/black"
-            android:onClick="login"/>
+            app:strokeColor="@color/black" />
 
         <LinearLayout
             android:layout_width="wrap_content"

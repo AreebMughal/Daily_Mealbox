@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "625356148798",
+    "project_id": "dailymeal-217f8",
+    "storage_bucket": "dailymeal-217f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625356148798:android:5c0efc7e0f3a7d518e016f",
+        "android_client_info": {
+          "package_name": "com.example.dailymeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625356148798-e1lf4v95564mpplj3i74kj1188tllbuf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dailymeal",
+            "certificate_hash": "19f7340578228dfbfea0944f3234eb4e3044a1b0"
+          }
+        },
+        {
+          "client_id": "625356148798-v9sa3vo9f23s6t52tf70clo0brjo2g7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnB0-eJIWuQ3uSh4jKv3W_A9bEig9TElE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625356148798-v9sa3vo9f23s6t52tf70clo0brjo2g7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

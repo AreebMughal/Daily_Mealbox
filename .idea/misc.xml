@@ -4,12 +4,34 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/areeb/AndroidStudioProjects/DailyMeal/app/src/main/res/layout/login.xml" value="0.1766304347826087" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/drawable-anydpi/ic_profile.xml" value="0.2203125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/drawable-anydpi/pass_lock.xml" value="0.2203125" />
         <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/drawable-anydpi/user.xml" value="0.2203125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/drawable/categories.xml" value="0.2203125" />
         <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/drawable/ic_meal_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/activity_drawer.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/activity_image_view.xml" value="0.1693840579710145" />
         <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/activity_login.xml" value="0.1721014492753623" />
         <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
         <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/activity_signup.xml" value="0.22" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/app_bar_drawer.xml" value="0.125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/content_drawer.xml" value="0.125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/fragment_drawer.xml" value="0.125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/fragment_gallery.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/login.xml" value="0.21" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/login_content.xml" value="0.17889492753623187" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/main_content.xml" value="0.125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/my_main_content.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/my_navigation_view.xml" value="0.13949275362318841" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/my_toolbar.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/nav_header_drawer.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/navigation_view.xml" value="0.125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/thumbnail.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/layout/toolbar.xml" value="0.125" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/menu/drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/areeb/OneDrive/Documents/Android Studio/Java_App/DailyMeal/app/src/main/res/menu/drawer_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

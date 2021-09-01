@@ -5,19 +5,27 @@ package com.example.dailymeal.data.model;
  */
 public class LoggedInUser {
 
-    private String userId;
-    private String displayName;
+    private static String userId;
+    private static String displayName;
 
     public LoggedInUser(String userId, String displayName) {
         this.userId = userId;
         this.displayName = displayName;
     }
 
-    public String getUserId() {
+    public static String getUserId() {
         return userId;
     }
 
-    public String getDisplayName() {
+    public static String getDisplayName() {
         return displayName;
+    }
+
+    public static void setDisplayName(String displayName) {
+        LoggedInUser.displayName = displayName;
+    }
+
+    public static void setUserId(String userId) {
+        LoggedInUser.userId = userId;
     }
 }

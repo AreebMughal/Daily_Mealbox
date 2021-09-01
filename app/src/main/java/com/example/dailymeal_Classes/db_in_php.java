@@ -1,4 +1,4 @@
-package com.example.dailymeal;
+package com.example.dailymeal_Classes;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -21,12 +21,12 @@ import java.net.URLEncoder;
  * Created by faiizii on 11-Feb-18.
  */
 
-public class background extends AsyncTask <String, Void,String> {
+public class db_in_php extends AsyncTask <String, Void,String> {
 
     AlertDialog dialog;
     Context context;
     public Boolean login = false;
-    public background(Context context)
+    public db_in_php(Context context)
     {
         this.context = context;
     }
