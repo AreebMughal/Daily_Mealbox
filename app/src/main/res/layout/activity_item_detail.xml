@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:src="@drawable/logo"
+            android:id="@+id/image_food"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="32dp" />
 
@@ -29,7 +30,8 @@
                 android:layout_height="50dp"
                 android:text="MEGA DEAL"
                 android:textSize="35dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/txt_foodName"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,6 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:id="@+id/txt_description"
             android:text="This is a mega deal which consists of 2 burgers, 2  French
 Fries and 2 Coac with a very reasonable price"
             android:textSize="20dp" />
