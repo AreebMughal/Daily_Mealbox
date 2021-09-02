@@ -29,7 +29,6 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         drawer = findViewById(R.id.drawer_layout);
 
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
@@ -70,6 +69,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 callActivity(LoginActivity.class);
                 break;
             case R.id.nav_fav:
+                callActivity(ItemDetailActivity.class);
                 break;
             case R.id.nav_plan:
                 break;

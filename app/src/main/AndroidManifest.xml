@@ -12,18 +12,26 @@
         android:roundIcon="@mipmap/ic_meal_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyMeal">
-        <activity
-            android:name=".SignupActivity"
-            android:exported="true"
-            android:theme="@style/Theme.NoActionBar"/>
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:theme="@style/Theme.NoActionBar"/>
+
         <activity
             android:name=".BaseActivity"
             android:exported="true"
-            android:theme="@style/Theme.NoActionBar"/>
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".ThumbnailActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".ItemDetailActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

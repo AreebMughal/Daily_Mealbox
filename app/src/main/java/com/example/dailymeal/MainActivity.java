@@ -5,17 +5,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.viewpager.widget.ViewPager;
+
 import com.example.dailymeal_Classes.AlertDialogue;
 import com.example.dailymeal_Classes.CheckInternet;
+import com.example.dailymeal_Classes.ImageAdapter;
 
 public class MainActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.addContentView(R.layout.main_content);
+        super.addContentView(R.layout.image_slider);
         super.setItemChecked(R.id.nav_home);
-        super.checkHeaderTitle();
+
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        ImageAdapter adapter = new ImageAdapter(this);
+        viewPager.setAdapter(adapter);
 
         if (CheckInternet.isInternetConnection(this)) {
             Toast.makeText(this, "Connected", Toast.LENGTH_SHORT).show();
