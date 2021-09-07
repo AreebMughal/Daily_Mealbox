@@ -39,6 +39,7 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.nav_view);
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
+        checkHeaderTitle();
     }
 
 
@@ -66,12 +67,22 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
                 callActivity(MainActivity.class);
                 break;
             case R.id.nav_prof:
-                callActivity(LoginActivity.class);
+                if (LoggedInUser.getDisplayName() == null)
+                    startActivity(new Intent(this, LoginActivity.class));
+                else
+                    startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.nav_fav:
-                callActivity(ItemDetailActivity.class);
+//                callActivity(ItemDetailActivity.class);
                 break;
             case R.id.nav_plan:
+                break;
+            case R.id.nav_category:
+//                callActivity(ThumbnailActivity.class);
+                break;
+            case R.id.nav_logout:
+                LoggedInUser.removeUser();
+                callActivity(MainActivity.class);
                 break;
             default:
                 break;

@@ -13,11 +13,11 @@ public class ImageAdapter extends PagerAdapter {
     private Context mContext;
     private int[] mImageIds = new int[]
             {
-                    R.drawable.img_deal_1,
-                    R.drawable.img_deal_1,
-                    R.drawable.img_deal_3,
-                    R.drawable.img_deal_5,
-                    R.drawable.img_deal_6
+                    R.drawable.s1,
+                    R.drawable.s2,
+                    R.drawable.s3,
+                    R.drawable.s4,
+                    R.drawable.img_if_4
             };
 
     public ImageAdapter(Context context) {

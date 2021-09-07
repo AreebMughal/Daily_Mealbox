@@ -7,10 +7,24 @@ public class LoggedInUser {
 
     private static String userId;
     private static String displayName;
+    private static String email;
+    private static String phone;
+    private static String address;
 
-    public LoggedInUser(String userId, String displayName) {
-        this.userId = userId;
-        this.displayName = displayName;
+    public static String getEmail() {
+        return email;
+    }
+
+    public static void setEmail(String email) {
+        LoggedInUser.email = email;
+    }
+
+    public static String getAddress() {
+        return address;
+    }
+
+    public static void setAddress(String address) {
+        LoggedInUser.address = address;
     }
 
     public static String getUserId() {
@@ -27,5 +41,21 @@ public class LoggedInUser {
 
     public static void setUserId(String userId) {
         LoggedInUser.userId = userId;
+    }
+
+    public static String getPhone() {
+        return phone;
+    }
+
+    public static void setPhone(String phone) {
+        LoggedInUser.phone = phone;
+    }
+
+    public static void removeUser() {
+        userId = null;
+        displayName = null;
+        email = null;
+        phone = null;
+        address = null;
     }
 }

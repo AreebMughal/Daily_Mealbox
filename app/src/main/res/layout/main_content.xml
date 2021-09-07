@@ -2,28 +2,60 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.AppCompat.Light"
-    android:background="#E1E1E1">
+    android:background="#E1E1E1"
+    android:paddingBottom="20dp"
+    android:theme="@style/Theme.AppCompat.Light">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="70dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/tablelogo"
+                android:id="@+id/img_logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:id="@+id/txt_logo"
+                android:fontFamily="fantasy"
+                android:text="RICH TABLE"
+                android:layout_toRightOf="@id/img_logo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_below="@id/txt_logo"
+                android:layout_toRightOf="@id/img_logo"
+                android:fontFamily="cursive"
+                android:text="Happy Meal"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <include layout="@layout/image_slider" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="end"-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            android:gravity="end"-->
-<!--            android:onClick="hello"-->
-<!--            android:text="Hello World Click Me"-->
-<!--            android:textSize="20dp" />-->
-
         <include layout="@layout/horizontal_slider" />
+
     </LinearLayout>
 
 </ScrollView>

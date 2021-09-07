@@ -12,20 +12,47 @@ import com.example.dailymeal_Classes.AlertDialogue;
 import com.example.dailymeal_Classes.CheckInternet;
 import com.example.dailymeal_Classes.DummyData;
 import com.example.dailymeal_Classes.ImageAdapter;
+import com.smarteist.autoimageslider.SliderView;
+
+import java.util.Timer;
 
 
 public class MainActivity extends BaseActivity {
 
-
+    SliderView sliderView;
+    int [] image = {R.drawable.s1,
+            R.drawable.s2,
+            R.drawable.s3,
+            R.drawable.s4,
+            R.drawable.s1,
+    };
+    int currentPage = 0;
+    Timer timer;
+    final long DELAY_MS = 500;//delay in milliseconds before task is to be executed
+    final long PERIOD_MS = 3000;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.addContentView(R.layout.main_content);
         super.setItemChecked(R.id.nav_home);
+
+//        sliderView = findViewById(R.id.slider);
+//
+//        SliderAdopter sliderAdopter = new SliderAdopter(image);
+//
+//        sliderView.setSliderAdapter(sliderAdopter);
+//        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+//        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+//        sliderView.startAutoCycle();
+
+
+
         try {
             ViewPager viewPager = findViewById(R.id.viewPager);
             ImageAdapter adapter = new ImageAdapter(this);
             viewPager.setAdapter(adapter);
+            for (int i = 0; i < adapter.getCount()-1; i++)
+                viewPager.setCurrentItem(i, true);
         } catch (Exception e) {
             (new AlertDialogue(this)).printMsg(e);
         }
@@ -63,7 +90,9 @@ public class MainActivity extends BaseActivity {
     }
 
     public void openAll(View view) {
-
+        Intent intent = new Intent(this,ThumbnailActivity.class);
+        intent.putExtra("category", (findViewById(view.getId())).getTag().toString() );
+        startActivity(intent);
     }
 
     public void openDetailActivity(View view) {

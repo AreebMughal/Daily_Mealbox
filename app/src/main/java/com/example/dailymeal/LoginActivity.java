@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import com.example.dailymeal.data.model.LoggedInUser;
 import com.example.dailymeal_Classes.AlertDialogue;
 import com.example.dailymeal_Classes.CheckInternet;
-import com.example.dailymeal_Classes.User;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -68,14 +67,12 @@ public class LoginActivity extends BaseActivity {
                     if (snapshot.exists()) {
                         String password = snapshot.child("password").getValue().toString();
                         if (password.equals(edtxt_pass.getText().toString())) {
-                            User user = new User();
-                            user.setName(snapshot.child("name").getValue().toString());
-                            user.setUname(username);
-                            user.setPassword(null);
+                            LoggedInUser.setDisplayName(snapshot.child("name").getValue().toString());
                             LoggedInUser.setUserId(username);
-                            LoggedInUser.setDisplayName(user.getName());
+                            LoggedInUser.setEmail(snapshot.child("email").getValue().toString());
+                            LoggedInUser.setPhone(snapshot.child("phone").getValue().toString());
                             LoginActivity.super.checkHeaderTitle();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                             finish();
                         } else
                             setAlertMsg("Invalid Username/Password!");
@@ -116,6 +113,7 @@ public class LoginActivity extends BaseActivity {
 
     public void openSignup(View view) {
         startActivity(new Intent(this, SignupActivity.class));
+        finish();
     }
 
     private boolean isEmpty() {

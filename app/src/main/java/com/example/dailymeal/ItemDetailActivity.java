@@ -15,10 +15,12 @@ import java.util.ArrayList;
 public class ItemDetailActivity extends AppCompatActivity {
 
     TextView txt_quantity, txt_price, txt_description, txt_foodname;
-    ImageView image_food;
+    ImageView image_food, img_fav;
     int count = 0;
     int id;
     ArrayList<Items> items;
+
+    boolean checkIcon = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,17 @@ public class ItemDetailActivity extends AppCompatActivity {
         items = DummyData.getItems();
 
         loadData();
+
+    }
+
+    public void toggleIcon(View view) {
+        if (checkIcon == false) {
+            checkIcon = true;
+            img_fav.setImageResource(R.drawable.ic_red);
+        } else {
+            img_fav.setImageResource(R.drawable.ic_fav);
+            checkIcon = false;
+        }
     }
 
     private void initializeComponents() {
@@ -40,6 +53,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         txt_price = findViewById(R.id.txt_price);
         txt_description = findViewById(R.id.txt_description);
         image_food = findViewById(R.id.image_food);
+        img_fav = findViewById(R.id.img_fav);
     }
 
     private void loadData() {

@@ -1,5 +1,6 @@
 package com.example.dailymeal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,8 +29,8 @@ public class SignupActivity extends BaseActivity {
 //    private static final String pass = "areeb123";
 
     DatabaseReference db = FirebaseDatabase.getInstance().getReferenceFromUrl("https://dailymeal-217f8-default-rtdb.firebaseio.com/");
-    TextInputEditText edtxt_name, edtxt_username, edtxt_password, edtxt_cpass;
-    TextInputLayout txt_cpass, txt_name, txt_password, txt_username;
+    TextInputEditText edtxt_name, edtxt_username, edtxt_phone, edtxt_email, edtxt_password, edtxt_cpass;
+    TextInputLayout txt_cpass, txt_name, txt_phone, txt_email, txt_password, txt_username;
 
     AlertDialogue alert;
 
@@ -38,7 +39,6 @@ public class SignupActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         super.addContentView(R.layout.activity_signup);
         super.setItemChecked(R.id.nav_prof);
-        super.checkHeaderTitle();
 
         FirebaseApp firebaseApp = FirebaseApp.initializeApp(this);
 
@@ -51,11 +51,15 @@ public class SignupActivity extends BaseActivity {
         try {
             edtxt_name = findViewById(R.id.edtxt_name);
             edtxt_username = findViewById(R.id.edtxt_username);
+            edtxt_phone = findViewById(R.id.edtxt_phone);
+            edtxt_email = findViewById(R.id.edtxt_email);
             edtxt_password = findViewById(R.id.edtxt_password);
             edtxt_cpass = findViewById(R.id.edtxt_cpass);
 
             txt_name = findViewById(R.id.txt_name);
+            txt_phone = findViewById(R.id.txt_phone);
             txt_username = findViewById(R.id.txt_username);
+            txt_email = findViewById(R.id.txt_email);
             txt_password = findViewById(R.id.txt_password);
             txt_cpass = findViewById(R.id.txt_cpass);
         } catch (Exception e) {
@@ -67,6 +71,7 @@ public class SignupActivity extends BaseActivity {
         try {
             edtxt_name.addTextChangedListener(generalTextWatcher(edtxt_name, txt_name));
             edtxt_username.addTextChangedListener(generalTextWatcher(edtxt_username, txt_username));
+            edtxt_email.addTextChangedListener(generalTextWatcher(edtxt_email, txt_email));
             edtxt_password.addTextChangedListener(generalTextWatcher(edtxt_password, txt_password));
             edtxt_cpass.addTextChangedListener(generalTextWatcher(edtxt_cpass, txt_cpass));
         } catch (Exception e) {
@@ -75,7 +80,8 @@ public class SignupActivity extends BaseActivity {
     }
 
     public void openLogin(View view) {
-        this.finish();
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
     }
 
     public void Register(View view) {
@@ -93,7 +99,7 @@ public class SignupActivity extends BaseActivity {
     }
 
     private ValueEventListener addFirebaseValueListener() {
-        User user = new User(edtxt_name.getText().toString(), edtxt_username.getText().toString(), edtxt_password.getText().toString());
+        User user = new User(edtxt_name.getText().toString(), edtxt_username.getText().toString(), edtxt_phone.getText().toString(), edtxt_email.getText().toString(), edtxt_password.getText().toString());
 
         return new ValueEventListener() {
             @Override
@@ -121,10 +127,16 @@ public class SignupActivity extends BaseActivity {
         String msg = "*This field is required!";
         if (edtxt_name.getText().length() == 0)
             txt_name.setError(msg);
+
         else if (edtxt_username.getText().length() == 0)
             edtxt_username.setError(msg);
+
+        else if (edtxt_email.getText().length() == 0)
+            txt_email.setError(msg);
+
         else if (edtxt_password.getText().length() == 0)
             txt_password.setError(msg);
+
         else if (edtxt_cpass.getText().length() == 0)
             txt_cpass.setError(msg);
         else
@@ -153,8 +165,7 @@ public class SignupActivity extends BaseActivity {
                     if (!matchPassowrd()) {
                         txtview.setError("*Password not match.");
 
-                    }
-                    else
+                    } else
                         txtview.setError(null);
                 }
             }

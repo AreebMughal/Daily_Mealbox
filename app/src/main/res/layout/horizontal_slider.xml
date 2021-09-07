@@ -1,96 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="fantasy"
-            android:text="Fast Food"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="fantasy"
-            android:gravity="right"
-            android:onClick="openAll"
-            android:text="See All"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imgview_1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="2dp"
-                android:background="@drawable/shape_border"
-                android:onClick="openDetailActivity"
-                android:padding="5dp"
-                android:src="@drawable/img_deal_1"
-                android:tag="img_deal_1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="fantasy"
+                android:text="Fast Food"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/imgview_2"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/shape_border"
-                android:onClick="openDetailActivity"
-                android:padding="5dp"
-                android:src="@drawable/img_deal_2"
-                android:tag="img_deal_2" />
-
-            <ImageView
-                android:id="@+id/imgview_3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/shape_border"
-                android:onClick="openDetailActivity"
-                android:src="@drawable/img_deal_3"
-                android:tag="img_deal_3" />
-
-            <ImageView
-                android:id="@+id/imgview_4"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/shape_border"
-                android:onClick="openDetailActivity"
-                android:src="@drawable/img_deal_4"
-                android:tag="img_deal_4" />
-
-            <ImageView
-                android:id="@+id/imgview_5"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:background="@drawable/shape_border"
-                android:onClick="openDetailActivity"
-                android:src="@drawable/img_deal_5"
-                android:tag="img_deal_5" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="fantasy"
+                android:gravity="right"
+                android:onClick="openAll"
+                android:tag="FastFood"
+                android:id="@+id/txt_seeAll1"
+                android:text="See All"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-    </HorizontalScrollView>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgview_1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:padding="5dp"
+                    android:src="@drawable/img_ff_1"
+                    android:tag="img_ff_1" />
+
+                <ImageView
+                    android:id="@+id/imgview_2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:padding="5dp"
+                    android:src="@drawable/img_ff_2"
+                    android:tag="img_ff_2" />
+
+                <ImageView
+                    android:id="@+id/imgview_3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_ff_3"
+                    android:tag="img_ff_3" />
+
+                <ImageView
+                    android:id="@+id/imgview_4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_ff_4"
+                    android:tag="img_ff_4" />
+
+                <ImageView
+                    android:id="@+id/imgview_5"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_ff_5"
+                    android:tag="img_ff_5" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="fantasy"
+                android:text="Italian"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="fantasy"
+                android:gravity="right"
+                android:onClick="openAll"
+                android:id="@+id/txt_seeAll2"
+                android:text="See All"
+                android:tag="Italian"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgview_11"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:padding="5dp"
+                    android:src="@drawable/img_if_10"
+                    android:tag="img_if_10" />
+
+                <ImageView
+                    android:id="@+id/imgview_12"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:padding="5dp"
+                    android:src="@drawable/img_if_8"
+                    android:tag="img_if_8" />
+
+                <ImageView
+                    android:id="@+id/imgview_13"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_if_3"
+                    android:tag="img_if_3" />
+
+                <ImageView
+                    android:id="@+id/imgview_14"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_if_4"
+                    android:tag="img_if_4" />
+
+                <ImageView
+                    android:id="@+id/imgview_15"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_if_5"
+                    android:tag="img_if_5" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="fantasy"
+                android:text="Chinese"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="fantasy"
+                android:gravity="right"
+                android:onClick="openAll"
+                android:tag="Chinese"
+                android:id="@+id/txt_seeAll3"
+                android:text="See All"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgview_16"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:padding="5dp"
+                    android:src="@drawable/img_cf_6"
+                    android:tag="img_cf_6" />
+
+                <ImageView
+                    android:id="@+id/imgview_17"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:padding="5dp"
+                    android:src="@drawable/img_cf_7"
+                    android:tag="img_cf_7" />
+
+                <ImageView
+                    android:id="@+id/imgview_18"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_cf_8"
+                    android:tag="img_cf_8" />
+
+                <ImageView
+                    android:id="@+id/imgview_19"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_cf_9"
+                    android:tag="img_cf_9" />
+
+                <ImageView
+                    android:id="@+id/imgview_20"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_border"
+                    android:onClick="openDetailActivity"
+                    android:src="@drawable/img_cf_1"
+                    android:tag="img_cf_1" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+</ScrollView>
